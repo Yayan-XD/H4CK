@@ -61,11 +61,12 @@
 
 
 ## Informasi For Updates Script
-* Crack All Countries No Login
-* Crack Friends List
-* Crack Public Id
-* Crack Group Id
-* Hack Target Fb
+* Crack From Public Id
+* Crack From Followers
+* Show Token
+* Find Date Of Birth
+* Return Method Menu
+* Logout
 * Mutli type login :
  - Manual
  - [Token](https://youtu.be/hQ-lYxozghU)
