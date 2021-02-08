@@ -66,7 +66,6 @@
 * Show Token
 * Find Date Of Birth
 * Return Method Menu
-* Logout
 * Mutli type login :
  - Manual
  - [Token](https://youtu.be/hQ-lYxozghU)
