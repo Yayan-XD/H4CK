@@ -1,12 +1,3 @@
-<img src="https://github.com/Yayan-XD/mbf-2/blob/main/Ngentod/wallpaperbetter_(1).jpg" width="640" title="Menu" alt="Menu">
-</p>
- <a href="https://github.com/Yayan-XD/H4CK">
-    <img alt="Repo Size" src="https://img.shields.io/github/repo-size/Yayan-XD/H4CK.svg"/>
-  </a>
-
- <a href="https://github.com/Yayan-XD/H4CK">
-    <img alt="Top Language" src="https://img.shields.io/github/languages/top/Yayan-XD/H4CK.svg"/>
-  </a>
 
 <h1 align="center">
   H4CK
@@ -34,7 +25,12 @@
   <a href="https://github.com/Yayan-XD/H4CK">
     <img alt="Starts" src="https://img.shields.io/github/stars/Yayan-XD/H4CK.svg"/>
   </a>
-  <a href="https://github.com/Yayan-XD/H4CK">
+<a href="https://github.com/Yayan-XD/H4CK">
+    <img alt="Repo Size" src="https://img.shields.io/github/repo-size/Yayan-XD/H4CK.svg"/>
+  </a>
+
+<a href="https://github.com/Yayan-XD/H4CK">
+    <img alt="Top Language" src="https://img.shields.io/github/languages/top/Yayan-XD/H4CK.svg"/> <a href="https://github.com/Yayan-XD/H4CK">
     <img alt="Forks" src="https://img.shields.io/github/forks/Yayan-XD/H4CK.svg"/>
   </a>
 </div>
