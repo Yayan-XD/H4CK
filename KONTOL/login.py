@@ -81,7 +81,7 @@ logo ='''\n\x1b[1;91m  •\x1b[1;93m•\x1b[1;92m•\x1b[1;97m\n
 \x1b[1;94m────────────────────────────────────────────────────'''
 
     
-
+### MASUK ###
 def kanjut():
     os.system('clear')
     print logo
@@ -109,6 +109,7 @@ def pilih_kanjut():
         pilih_kanjut()
 
 
+### LOGIN TOKEN/USER PASS ###
 def memek():
     os.system('clear')
     print logo
@@ -154,6 +155,7 @@ def pilih_memek():
         pilih_memek()
 
 
+### LOGIN NEW FB ###
 def login_fb():
     os.system('clear')
     print logo
@@ -190,6 +192,7 @@ def login_fb():
         memek()
 
 
+### B-API METODE ####
 def yxz():
     global token
     os.system('clear')
@@ -451,6 +454,7 @@ def pilih_syngg():
     kanjut()
 
 
+### CEK TOKEN ###
 def login_token():
     os.system('clear')
     print logo
@@ -464,6 +468,7 @@ def login_token():
     yxz()
 
 
+### PILIH KALUAR ####
 def logout():
     os.system('clear')
     print logo
@@ -478,6 +483,7 @@ def logout():
     	keluar()
 
 
+### GRAPH METODE ###
 def yayan_xd():
     global token
     try:
@@ -586,10 +592,11 @@ def pilih_asu():
     print ' \x1b[1;96mProcess Has Completed'
     print ' \x1b[1;93mTotal DOB \x1b[1;91m:\x1b[1;92m  ' + str(len(nms))
     print '\x1b[1;94m────────────────────────────────────────────────────'
-    raw_input('\n\x1b[1;96mPress enter to back')
-    yayan_xd()
+    raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+    kanjut()
 
 
+### CEK AKUN ###
 def anjing():
     global token
     try:
@@ -646,6 +653,7 @@ def conf():
         yxz()
 
 
+### LOCALHOST NETODE ###
 def moch_yayan():
     global token
     os.system('clear')
