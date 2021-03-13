@@ -199,7 +199,7 @@ def yxz():
     try:
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
-        kanjut()
+        login()
 
     try:
         r = requests.get('https://graph.facebook.com/me?access_token=' + token)
@@ -654,7 +654,7 @@ def moch_yayan():
     try:
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
-        kanjut()
+        login()
 
     try:
         r = requests.get('https://graph.facebook.com/me?access_token=' + token)
