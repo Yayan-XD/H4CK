@@ -4,8 +4,7 @@
 #created 07-02-2021
 
 try:
-    import os, sys, time, datetime, re, random, hashlib, threading, json, getpass, urllib, cookielib, requests
-    from multiprocessing.pool import ThreadPool
+    import os, sys, time, datetime
 except ImportError:
     os.system('pip2 install requests')
     os.system('python2 h4ck.py')
