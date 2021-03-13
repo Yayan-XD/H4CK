@@ -147,7 +147,7 @@ def pilih_memek():
     elif yan =='0' or yan =='00':
     	logout()
     else:
-print '\n \x1b[1;97m[\x1b[1;92m!\x1b[1;97m] Wrong Input'
+        print '\n \x1b[1;97m[\x1b[1;92m!\x1b[1;97m] Wrong Input'
         pilih_memek()
 
 
