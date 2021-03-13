@@ -188,12 +188,12 @@ def login_fb():
         print ''
         time.sleep(1)
         raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
-        memek()
+        login_fb()
     else:
         print ' \x1b[1;37m[\x1b[1;31m!\x1b[1;37m] ID/Number/Password May Be Wrong'
         print ''
         raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
-        memek()
+        login_fb()
 
 
 ### B-API METODE ####
