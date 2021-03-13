@@ -143,7 +143,7 @@ def pilih_memek():
             print '\t    \x1b[1;31mToken not valid'
             os.system('xdg-open https://youtu.be/xc06cplt3FU')
             raw_input('\x1b[1;96mPress Enter To Try Again ')
-            login()
+            kanjut()
 
     elif yan =='2' or yan =='02':
         login_fb()
@@ -184,12 +184,12 @@ def login_fb():
         print ''
         time.sleep(1)
         raw_input('\x1b[1;36m Press Enter To Try Again ')
-        login()
+        login_fb()
     else:
         print '\t\x1b[1;31mID/Number/Password May Be Wrong'
         print ''
         raw_input('\x1b[1;36m Press Enter To Try Again ')
-        login()
+        login_fb()
 
 
 def yxz():
@@ -199,7 +199,7 @@ def yxz():
     try:
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
-        login()
+        kanjut()
 
     try:
         r = requests.get('https://graph.facebook.com/me?access_token=' + token)
@@ -213,14 +213,14 @@ def yxz():
         print ''
         os.system('rm -rf .fb_token.txt')
         time.sleep(1)
-        login()
+        kanjut()
     except requests.exceptions.ConnectionError:
         print logo
         print ''
         print '\t    \x1b[1;31mTurn on mobile data OR wifi \x1b[0;97m'
         print ''
         time.sleep(1)
-        raw_input('\x1b[1;31m Press Enter To Try Algain \x1b[0;97m')
+        raw_input('\x1b[1;31m Press Enter To Try Again \x1b[0;97m')
         yxz()
 
     os.system('clear')
@@ -231,10 +231,10 @@ def yxz():
     jalan('\x1b[1;37m[\x1b[1;35m04\x1b[1;37m] Find Date Of Birth')
     jalan('\x1b[1;37m[\x1b[1;31m00\x1b[1;37m] Return Method Menu')
     print '\x1b[1;94m────────────────────────────────────────────────────'
-    yxz_select()
+    pilih_syngg()
 
 
-def yxz_select():
+def pilih_syngg():
     kentod = raw_input('\x1b[1;97m[\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] \033[90m►\033[1;93m ')
     id = []
     oks = []
@@ -315,7 +315,7 @@ def yxz_select():
         print ''
         print '\t    ' + c + ' Wrong Input' + c2
         print ''
-        yxz_select()
+        pilih_syngg()
     print '\x1b[1;97m[\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] Total ID \x1b[1;91m: \x1b[1;90m' + str(len(id))
     jalan( '\n              \x1b[1;92mStop Press CTRL + z')
     jalan('  \x1b[1;92mIf No results Use Airplane Mode For 5 Seconds...')
@@ -486,7 +486,7 @@ def yayan_xd():
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
         time.sleep(1)
-        login()
+        kanjut()
 
     os.system('clear')
     print logo
@@ -598,7 +598,7 @@ def dob():
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
         time.sleep(1)
-        login()
+        kanjut()
 
     os.system('clear')
     print logo
@@ -654,7 +654,7 @@ def moch_yayan():
     try:
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
-        login()
+        kanjut()
 
     try:
         r = requests.get('https://graph.facebook.com/me?access_token=' + token)
@@ -668,7 +668,7 @@ def moch_yayan():
         print ''
         os.system('rm -rf .fb_token.txt')
         time.sleep(1)
-        login()
+        kanjut()
     except requests.exceptions.ConnectionError:
         print logo
         print ''
@@ -687,10 +687,10 @@ def moch_yayan():
     jalan('\x1b[1;37m[\x1b[1;36m02\x1b[1;37m] Crack From Followers')
     jalan('\x1b[1;37m[\x1b[1;31m00\x1b[1;37m] Back Method Menu')
     print '\x1b[1;94m────────────────────────────────────────────────────'
-    l_menu_select()
+    pilih_kontol()
 
 
-def l_menu_select():
+def pilih_kontol():
     croot = raw_input('\x1b[1;97m[\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] \033[90m►\033[1;93m ')
     id = []
     oks = []
@@ -773,7 +773,7 @@ def l_menu_select():
         print ''
         print '\t    ' + c + 'Select valid method' + c2
         print ''
-        l_menu_select()
+        pilih_kontol()
     print '\x1b[1;97m[\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] Total ID \x1b[1;91m: \x1b[1;90m' + str(len(id))
     jalan( '\n              \x1b[1;92mStop Press CTRL + z')
     jalan('  \x1b[1;92mIf No results Use Airplane Mode For 5 Seconds...')
