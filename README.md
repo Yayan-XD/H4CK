@@ -54,8 +54,10 @@
 > cd H4CK
 > python2 h4ck.py
 ```
-
-
+```
+ [•] Username : Yayan-XD
+ [•] Password : Yayan-XD
+```
 ## Informasi For Updates Script
 * Crack From Public Id
 * Crack From Followers
