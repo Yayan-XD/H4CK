@@ -143,7 +143,7 @@ def pilih_memek():
             print '\t    \x1b[1;31mToken not valid'
             os.system('xdg-open https://youtu.be/xc06cplt3FU')
             raw_input('\x1b[1;96mPress Enter To Try Again ')
-            kanjut()
+            memek()
 
     elif yan =='2' or yan =='02':
         login_fb()
@@ -199,7 +199,7 @@ def yxz():
     try:
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
-        login()
+        memek()
 
     try:
         r = requests.get('https://graph.facebook.com/me?access_token=' + token)
@@ -654,7 +654,7 @@ def moch_yayan():
     try:
         token = open('.fb_token.txt', 'r').read()
     except (KeyError, IOError):
-        login()
+        memek()
 
     try:
         r = requests.get('https://graph.facebook.com/me?access_token=' + token)
