@@ -40,10 +40,6 @@ elif os.path.isfile('/data/data/com.termux/files/home/H4CK/KONTOL/node_modules/b
 bd = random.randint(20000000.0, 30000000.0)
 sim = random.randint(20000.0, 40000.0)
 header = {'x-fb-connection-bandwidth': repr(bd), 'x-fb-sim-hni': repr(sim), 'x-fb-net-hni': repr(sim), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0', 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
-
-http_proxy  = "http://10.10.1.10:3128"
-https_proxy = "https://10.10.1.11:1080"
-
 reload(sys)
 sys.setdefaultencoding('utf-8')
 c = '\x1b[1;32m'
