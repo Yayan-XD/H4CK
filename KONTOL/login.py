@@ -1,5 +1,8 @@
 #!/usr/bin/python2
 # coding=utf-8
+# RECODE MULU KONTOL TINGGAL PAKAI APA SUSAH NYA ANJING
+# PANTEK LO SEMUA BERTUMBUK SAMA GW PANTEX!!!
+
 #Code by Yayan-XD
 #created 07-02-2021
 
@@ -121,7 +124,7 @@ def pilih_memek():
     if yan == '1' or yan == '01':
         os.system('clear')
         print logo
-        token = raw_input('\x1b[1;97m[\x1b[1;91m?\x1b[1;97m] Token \x1b[1;91m:\x1b[1;92m ')
+        token = raw_input('\n \x1b[1;97m[\x1b[1;91m?\x1b[1;97m] Token \x1b[1;91m:\x1b[1;92m ')
         token_s = open('.fb_token.txt', 'w')
         token_s.write(token)
         token_s.close()
