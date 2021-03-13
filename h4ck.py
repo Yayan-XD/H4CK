@@ -1,7 +1,7 @@
 #!/usr/bin/python2
 # coding=utf-8
 #Code by Yayan-XD
-#created 07-02-20
+#created 07-02-2021
 
 try:
     import os, sys, time, datetime, re, random, hashlib, threading, json, getpass, urllib, cookielib, requests
@@ -30,8 +30,8 @@ logo ='''\n\x1b[1;91m  •\x1b[1;93m•\x1b[1;92m•\x1b[1;97m\n
 \x1b[1;94m────────────────────────────────────────────────────'''
 
 os.system('clear')
-CorrectUsername = 'YayanXD'
-CorrectPassword = 'YayanXD'
+CorrectUsername = 'Yayan-XD'
+CorrectPassword = 'Yayan-XD'
 
 loop = 'true'
 while (loop == 'true'):
