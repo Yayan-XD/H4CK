@@ -593,7 +593,7 @@ def pilih_asu():
     kanjut()
 
 
-### CEK AKUN ###
+### CEK HASIL CRACK ###
 def anjing():
     global token
     try:
@@ -650,7 +650,7 @@ def conf():
         yxz()
 
 
-### LOCALHOST NETODE ###
+### LOCALHOST METODE ###
 def moch_yayan():
     global token
     os.system('clear')
